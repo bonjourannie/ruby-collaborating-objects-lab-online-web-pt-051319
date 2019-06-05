@@ -6,7 +6,7 @@ def Song
     @name = name
   end 
   
-  def new_by_filename
+  def new_by_filename(file)
     #must parse a filename to find the song name and artist (.split(" - " maybe)
     #create a new song instance using the string we gathered from the filename 
     #associate that new song with an artist with String#artist()
