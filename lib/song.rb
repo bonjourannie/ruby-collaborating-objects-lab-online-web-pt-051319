@@ -11,6 +11,9 @@ def Song
     #create a new song instance using the string we gathered from the filename 
     #associate that new song with an artist with String#artist()
     #return new song instance 
+    song_name = file.split(" - ")[1]
+    artist = file.split(" - ")[0]
+    song = self.new(song_name)
   end
   
   def artist_name=(name)
