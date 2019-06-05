@@ -21,6 +21,18 @@ class Artist
     end
   end
   
+  def self.find(name)
+    @@all.find do |artist|
+      artist.name == name
+    end
+  end
+
+  def self.create(name)
+    artist = self.new(name)
+    @@all << artist
+    artist
+  end
+  
   def add_song(song)
     @songs << song
     #song.artist = self
